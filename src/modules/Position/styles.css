@@ -1,0 +1,10 @@
+.container {
+  margin-left: 170px;
+  min-width: calc(100vw - 210px);
+  display: block;
+  width: calc(100vw - 150px);
+  height: calc(110vh);
+  position: relative;
+  top: -40px;
+  z-index: 0;
+}

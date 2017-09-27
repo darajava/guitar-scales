@@ -1,0 +1,20 @@
+.header {
+	color: #bbb;
+  border-bottom: 1px solid #bbb;
+  max-width: 100%;
+}
+
+.header h1 {
+  display: inline-block;
+}
+
+.date {
+  padding-left: 30px;
+}
+
+.right {
+  position: absolute;
+  left: 596px;
+  top: 62px;
+}
+

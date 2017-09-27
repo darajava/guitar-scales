@@ -1,0 +1,50 @@
+.card {
+  max-width: 400px;
+  border: 1px solid #ccc;
+  color: #444;
+  box-shadow: 2px 3px 9px 0px rgba(179,179,179,1);
+  background-color: white;
+  margin: 10px;
+  padding: 23px;
+  width: 400px;
+  margin-left: 200px;
+}
+
+.title {
+  border-bottom: 1px solid aqua;
+  color: #555;
+}
+
+.animation-container {
+  position: relative;
+  zoom: 0.7;
+  float: right;
+  left: -138px;
+}
+
+.link {
+  float: right;
+  padding: 15px;
+  color: #ff5454;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.message {
+  color: #444;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.submitted {
+  position: relative;
+  top: -15px;
+  font-size: 11px;
+  color: #888;
+}

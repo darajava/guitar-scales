@@ -22,7 +22,7 @@ const Fretboard = (props) => {
 
   return (
     <div styleName='fretboard-container'>
-      <img styleName='fretboard' src={Wood} />
+      <img styleName='fretboard' src={'https://static1.squarespace.com/static/5463f707e4b0eec8affdc959/t/54810d38e4b0ad44dee92e31/1417743673096/off-black.png?format=1500w'} />
     
       {strings}
     </div>

@@ -6,28 +6,30 @@
 }
 
 .marker {
-  width: 16px;
-  height: 16px;
+  width: 19px;
+  height: 19px;
   border-radius: 100%;
   display: inline-block;
-  border: 2px solid #ccc;
-  margin: 2px 9px;
-  font-size: 8px;
+  margin: 2.5px 9px;
+  font-size: 10px;
   font-weight: bold;
   text-align: center;
-  line-height: 16px;
+  line-height: 19px;
+  box-shadow: 2px 3px 3px 0px rgba(17,17,17,1);
+
 }
 
 .on {
   composes: marker;
 
-  background-color: red;
+  background-color: #C76E06;
 }
 
 .root {
   composes: marker;
 
-  background-color: green;
+  background-color: #FCDC3B;
+  color: black;
 }
 
 .off {
@@ -48,10 +50,12 @@
 }
 
 .fretboard-container {
-  width: 100%;
-  height: 143px;
+  max-width: 100vw;
+  overflow: hidden;
+  height: 146px;
   position: relative;
   padding: 0;
+  margin-bottom: 30px;
 
 }
 

@@ -1,7 +1,12 @@
 import {Map} from 'immutable';
 
 const initialState = Map({
-  selectedScale: {},
+  selectedScale: {
+    text: "Major Pentatonic",
+    pattern: [2, 2, 3, 2, 3],
+    key: 'majorPentatonic',
+    type: 'scale',
+  },
   scales: {
     naturalMinor: {
       text: "Natural Minor",
@@ -47,49 +52,49 @@ const initialState = Map({
     },
     majorArpeggio: {
       pattern: [4, 3, 5],
-      text: "majorArpeggio",
+      text: "Major",
       key: "majorArpeggio",
       type: 'arpeggio',
     },
     minorArpeggio: {
       pattern: [3, 4, 5],
-      text: "minorArpeggio",
+      text: "Minor",
       key: "minorArpeggio",
       type: 'arpeggio',
     },
     major7Arpeggio: {
       pattern: [4, 3, 4, 1],
-      text: "major7Arpeggio",
+      text: "Major 7",
       key: "major7Arpeggio",
       type: 'arpeggio',
     },
     minor7Arpeggio: {
       pattern: [3, 4, 4, 1],
-      text: "minor7Arpeggio",
+      text: "Minor 7",
       key: "minor7Arpeggio",
       type: 'arpeggio',
     },
     augmentedArpeggio: {
       pattern: [4, 4, 4],
-      text: "augmentedArpeggio",
+      text: "Augmented",
       key: "augmentedArpeggio",
       type: 'arpeggio',
     },
     diminishedArpeggio: {
       pattern: [3, 3, 6],
-      text: "diminishedArpeggio",
+      text: "Diminished",
       key: "diminishedArpeggio",
       type: 'arpeggio',
     },
     augmented7Arpeggio: {
       pattern: [4, 4, 2, 2],
-      text: "augmented7Arpeggio",
+      text: "Augmented 7",
       key: "augmented7Arpeggio",
       type: 'arpeggio',
     },
     diminished7Arpeggio: {
       pattern: [3, 3, 3, 3],
-      text: "diminished7Arpeggio",
+      text: "Diminished 7",
       key: "diminished7Arpeggio",
       type: 'arpeggio',
     },

@@ -27,19 +27,9 @@ class MainLayout extends Component {
 
 
           <main>
-            <header className="primary-header">
-              <Header/>
-            </header>
+            
             <Switch>
-              <Route path='/scale/:key/:scale/:position' component={Practice} />
-              <Route path='/arpeggio/:key/:arpeggio/:position' component={Practice} />
-              <Route path='/scale/:key/:scale' component={Position} />
-              <Route path='/arpeggio/:key/:arpeggio' component={Position} />
-              <Route path='/scale/:key' component={Scale} />
-              <Route path='/arpeggio/:key' component={Arpeggio} />
-              <Route path='/scale' component={Key} />
-              <Route path='/arpeggio' component={Key} />
-              <Route path='/' component={Exercise} />
+              <Route path='/' component={Practice} />
             </Switch>
           </main>
         </div>

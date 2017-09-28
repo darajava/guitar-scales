@@ -11,10 +11,12 @@ const Practice = (props) => {
   let practices = props.practices;
   let practiceItems = [];
 
-  
 
   return (
     <div>
+      <div styleName="big-name">
+        {props.keyy.text} {props.scale.text} {props.exercise.text} 
+      </div>
       <Fretboard keyy={props.keyy.key} scale={props.scale.pattern} tuning={null} position={props.position.key} />
       {props.children}
     </div>

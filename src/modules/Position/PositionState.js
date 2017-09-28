@@ -1,7 +1,10 @@
 import {Map} from 'immutable';
 
 const initialState = Map({
-  selectedPosition: {},
+  selectedPosition: {
+    text: "1",
+    key: "1",
+  },
   positions: {
     '1': {
       text: "1",

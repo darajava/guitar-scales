@@ -14,7 +14,6 @@ const Header = (props) => {
           Guitar Scales
         </Link>
       </div>
-      <div styleName="space-header" />
     </div>
   )
 }

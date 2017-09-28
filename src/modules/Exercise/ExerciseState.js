@@ -1,7 +1,10 @@
 import {Map} from 'immutable';
 
 const initialState = Map({
-  selectedExercise: {},
+  selectedExercise: {
+    text: "Scale",
+    key: "scale",
+  },
   exercises: {
     scale: {
       text: "Scale",

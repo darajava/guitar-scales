@@ -20,6 +20,10 @@ class MainLayout extends Component {
       super(props);
     }
 
+    componentDidMount() {
+      localStorage.clear();
+    }
+
     render() {
       return (
       <Router>

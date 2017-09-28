@@ -18,7 +18,7 @@ class ScaleContainer extends Component {
   render () {
     console.log('scaleprops', this.props);
     return(
-      <ScaleView onClick={(scale) => { this.setSelectedScale(scale) }} {...this.props} scales={this.props.scales} />
+      <ScaleView type={this.props.selectedExercise.key} onClick={(scale) => { this.setSelectedScale(scale) }} {...this.props} scales={this.props.scales} />
     )
   }
 }

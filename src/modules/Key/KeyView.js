@@ -13,16 +13,24 @@ const Key = (props) => {
 
   for (let key in keys) {
     if (keys.hasOwnProperty(key)) {
-      keyItems.push(
-        <div onClick={() => { props.onClick(key) } }>
-          <Button link={props.location.pathname + '/' + key} label={keys[key].text} />
-        </div>
-      );
+      if (!props.small) {
+        keyItems.push(
+          <div onClick={() => { props.onClick(key) } }>
+            <Button link={props.location.pathname + '/' + key} label={keys[key].text} />
+          </div>
+        );
+      } else {
+        keyItems.push(
+          <div onClick={() => { props.onClick(key) } }>
+            <button>{keys[key].text}</button>
+          </div>
+        );
+      }
     }
   }
 
   return (
-    <div styleName="card">
+    <div>
     <div>Choose a {props.selectedExercise.text}</div>
       {keyItems}
     

@@ -16,6 +16,7 @@ const Practice = (props) => {
   return (
     <div>
       <Fretboard keyy={props.keyy.key} scale={props.scale.pattern} tuning={null} position={props.position.key} />
+      {props.children}
     </div>
   )
 };

@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { setSelectedPractice } from './PracticeState';
 import { connect } from 'react-redux';
 
+import ChooseKey from '../Key/KeyContainer';
+import ChooseScale from '../Scale/ScaleContainer';
+import ChooseExercise from '../Exercise/ExerciseContainer';
+
 import PracticeView from './Views/Practice';
 
 import Loading from '../../components/Loading/Loading';
@@ -11,8 +15,11 @@ class PracticeContainer extends Component {
 
   render () {
     return(
-      <PracticeView
-        {...this.props} />
+      <PracticeView {...this.props}>
+        <ChooseExercise small={true}/>
+        <ChooseScale small={true}/>
+        <ChooseKey small={true}/>
+      </PracticeView>
     )
   }
 }

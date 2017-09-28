@@ -13,16 +13,21 @@ const String = (props) => {
   let notes = ['a', 'as', 'b', 'c', 'cs', 'd', 'ds', 'e', 'f', 'fs', 'g', 'gs']; 
   let correctNotes = [false, false, false, false, false, false, false, false, false, false, false, false];
 
+  // Notes that have sharps in their key (kinda)
+  let sharpNotes = ['a', 'b', 'c', 'd', 'e', 'fs', 'g'];
+
+  // The names of the notes for whether the scale is 'sharp' or not
+  let flatNoteNames = ['A', 'Bb', 'B', 'C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab']; 
+  let sharpNoteNames = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#']; 
+
+
   let foundRoot = false;
   let i = 0, scaleNote = 0;
 
-  let stringPos = 0, keyPos = 0;
+  let stringPos = 0;
   for (let i = 0; i < notes.length; i++) {
     if (notes[i] === props.string) {
       stringPos += i;
-    }
-    if (notes[i] === props.keyy) {
-      keyPos += i;
     }
   }
 
@@ -44,8 +49,16 @@ const String = (props) => {
     if (!foundRoot) i++;
   }
 
+  let noteNames;
+  if (sharpNotes.includes(props.keyy)) {
+    noteNames = sharpNoteNames.slice(stringPos, sharpNoteNames.length).concat(sharpNoteNames.slice(0, stringPos));
+  } else {
+    noteNames = flatNoteNames.slice(stringPos, flatNoteNames.length).concat(flatNoteNames.slice(0, stringPos));
+  }
+
   correctNotes = correctNotes.slice(stringPos, correctNotes.length).concat(correctNotes.slice(0, stringPos));
   correctNotes = correctNotes.concat(correctNotes).concat(correctNotes.slice(0, 9));
+  noteNames = noteNames.concat(noteNames).concat(noteNames.slice(0, 9));
 
 
   console.log('correctNotes', props);
@@ -58,11 +71,11 @@ const String = (props) => {
   let markers = [];
   for (let i = 0; i < correctNotes.length; i++) {
     if (correctNotes[i] === 'root') {
-      markers.push(<div styleName='note-container'><div styleName='root' /></div>)
+      markers.push(<div styleName='note-container'><div styleName='root'>{noteNames[i]}</div></div>)
     } else if (correctNotes[i]) {
-      markers.push(<div styleName='note-container'><div styleName='on' /></div>)
+      markers.push(<div styleName='note-container'><div styleName='on'>{noteNames[i]}</div></div>)
     } else {
-      markers.push(<div styleName='note-container'><div styleName='off' /></div>);
+      markers.push(<div styleName='note-container'><div styleName='off'>{noteNames[i]}</div></div>);
     }
   }
   
